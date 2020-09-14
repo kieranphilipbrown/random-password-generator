@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Random Password Generator</title>
@@ -11,7 +12,7 @@
     <div class="container main-content">
         <div class="pw-container">
             <form id="pw-form">
-                <label for="pw-output">Password
+                <label for="pw-output" class="password-label">Password
                     <div class="tooltip">
                         <button id="copyToCb" class="copy-to-cb" onmouseout="outFunc()">
                             <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
@@ -22,7 +23,7 @@
                 </label>
 
                 <label for="pw-length">Length
-                    <input id="pw-length" type="number" value="6">
+                    <input id="pw-length" class="pw-len" type="number" value="6">
                 </label>
 
                 <label for="uppercaseCheck">Uppercase Letters
