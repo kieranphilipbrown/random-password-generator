@@ -2,6 +2,8 @@ const pwOutput = document.querySelector("#pw-output");
 const pwGenBtn = document.querySelector("#pw-generate-btn");
 const pwLength = document.querySelector("#pw-length");
 const copyToCb = document.querySelector("#copyToCb");
+const toastContainer = document.querySelector("#toastContainer");
+const toastText = document.querySelector("#toast-text");
 
 const uppercaseCheck = document.querySelector("#uppercaseCheck");
 const lowercaseCheck = document.querySelector("#lowercaseCheck");
@@ -42,7 +44,7 @@ function copyToClipboard(e) {
     console.log(pwOutput.value)
 
     if (pwOutput.value === null || pwOutput.value === undefined || pwOutput.value === "") {
-        alert("nothing to copy");
+        showToast("Nothing to copy...");
     } else {
         pwOutput.select();
         pwOutput.setSelectionRange(0, 99999);
@@ -73,6 +75,14 @@ function generateX() {
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
+function showToast(message) {
+    toastText.innerHTML = message;
+    toastContainer.classList.add("toast-show");
+    setTimeout(() => {
+        toastContainer.classList.remove("toast-show");
+    }, 2000);
+}
+
 function generatePassword(e) {
     e.preventDefault();
     // 1. Clear previous value
@@ -95,7 +105,7 @@ function generatePassword(e) {
     });
 
    if (checkboxArr.length < 1) {
-        alert("check at least one option");
+        showToast("Check at least one option");
    } else {
     // 5. Run the generate password functions
     for (let index = 0; index < pwSetLength; index++) {
