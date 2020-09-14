@@ -1,4 +1,4 @@
-# Random Password Generator
+# 🔑🔒 Random Password Generator
 
 Simple and clean random password generator.
 
