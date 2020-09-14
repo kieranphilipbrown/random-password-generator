@@ -94,6 +94,11 @@ label {
     transition: transform 0.4s ease;
     width: 100%;
 }
+.button:focus {
+    border-color: #a7cfff;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    outline: 0;
+}
 .button:hover {
     background: #2e2e2e;
     cursor: pointer;
