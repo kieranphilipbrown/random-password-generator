@@ -151,7 +151,7 @@ label {
     background: transparent;
     bottom: -100%;
     left: 0;
-    padding: 1rem 0;
+    padding: 1rem;
     position: fixed;
     right: 0;
     transition: 0.4s ease;
@@ -162,7 +162,7 @@ label {
     border-radius: 4px;
     margin: 0 auto;
     max-width: 400px;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
 }
 .toast p {
