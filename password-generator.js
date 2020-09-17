@@ -3,6 +3,7 @@ const pwGenBtn = document.querySelector("#pw-generate-btn");
 const pwLength = document.querySelector("#pw-length");
 const copyToCb = document.querySelector("#copyToCb");
 const toastContainer = document.querySelector("#toastContainer");
+const toastontainerInner = document.querySelector(".toast");
 const toastText = document.querySelector("#toast-text");
 
 const uppercaseCheck = document.querySelector("#uppercaseCheck");
@@ -49,6 +50,7 @@ function copyToClipboard(e) {
         pwOutput.select();
         pwOutput.setSelectionRange(0, 99999);
         document.execCommand("copy");
+        showToast("Copied to clipboard", "#04ff8054");
     }
 }
 
@@ -75,8 +77,9 @@ function generateX() {
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
-function showToast(message) {
+function showToast(message, color) {
     toastText.innerHTML = message;
+    toastontainerInner.style.backgroundColor = color;
     toastContainer.classList.add("toast-show");
     setTimeout(() => {
         toastContainer.classList.remove("toast-show");
