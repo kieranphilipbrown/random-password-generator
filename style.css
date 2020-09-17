@@ -63,6 +63,12 @@ label {
 .copy-to-cb:hover {
     cursor: pointer;
 }
+.copy-to-cb:focus {
+    border-color: #a7cfff;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    outline: 0;
+    outline: none;
+}
 .password-label {
     margin-bottom: 40px;
 }
@@ -144,6 +150,10 @@ label {
     border-color: #555 transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.copy-to-cb:focus .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
