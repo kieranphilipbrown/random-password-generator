@@ -45,12 +45,12 @@ function copyToClipboard(e) {
     console.log(pwOutput.value)
 
     if (pwOutput.value === null || pwOutput.value === undefined || pwOutput.value === "") {
-        showToast("Nothing to copy...");
+        showToast("Nothing to copy...", "#F4A4A5");
     } else {
         pwOutput.select();
         pwOutput.setSelectionRange(0, 99999);
         document.execCommand("copy");
-        showToast("Copied to clipboard", "#04ff8054");
+        showToast("Copied to clipboard", "#A1F7CE");
     }
 }
 
@@ -108,7 +108,7 @@ function generatePassword(e) {
     });
 
    if (checkboxArr.length < 1) {
-        showToast("Check at least one option");
+        showToast("Check at least one option", "#F4A4A5");
    } else {
     // 5. Run the generate password functions
     for (let index = 0; index < pwSetLength; index++) {
