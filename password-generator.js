@@ -9,6 +9,7 @@ const toastText = document.querySelector("#toast-text");
 const uppercaseCheck = document.querySelector("#uppercaseCheck");
 const lowercaseCheck = document.querySelector("#lowercaseCheck");
 const symbolsCheck = document.querySelector("#symbolsCheck");
+const numbersCheck = document.querySelector("#numbersCheck");
 
 const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
@@ -72,6 +73,10 @@ function generateX() {
 
     if (symbolsCheck.checked) {
         xs.push(getSymbols());
+    }
+    
+    if (numbersCheck.checked) {
+        xs.push(getNumbers());
     }
 
     return xs[Math.floor(Math.random() * xs.length)];
