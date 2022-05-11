@@ -9,6 +9,7 @@ body {
     font-family: 'Share Tech Mono', monospace;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 .container {
     margin-left: auto;
