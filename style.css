@@ -50,7 +50,8 @@ label {
     position: relative;
 }
 .pw-container {
-    max-width: 350px;
+    max-width: 300px;
+    width: 100%;
 }
 .pw-checkbox {
     height: 20px;
