@@ -38,6 +38,7 @@ input[type="number"] {
     margin-top: 4px;
     outline: none;
     padding: 0 15px;
+    width: 100%;
 }
 input:focus {
     border-color: #a7cfff;
@@ -48,11 +49,16 @@ label {
     margin-bottom: 15px;
     position: relative;
 }
+.pw-container {
+    min-width: 350px;
+}
 .pw-checkbox {
+    height: 20px;
     margin-bottom: 15px;
     position: absolute;
     right: 0;
     top: 0;
+    width: 20px;
 }
 .copy-to-cb {
     background: #fdfdfd;
